@@ -1,4 +1,4 @@
-//api/leads/route.tsx
+//api/leads/route.tsx 
 import { sql } from "@/lib/postgres";
 import { sendEmail } from "@/lib/mail";
 
