@@ -22,7 +22,18 @@ export async function sendEmail(to: string, name: string, data: any){
           email: to,
           name: name
         }
-      ],
+      ], 
+
+
+ // ✅ ADD THIS
+  bcc: [
+    {
+      email: "mr.morten.thygesen@gmail.com",
+      name: "GodMatch"
+    }
+  ],
+
+
       subject,
       htmlContent: data.html || "<p>Ingen besked</p>"
     })
