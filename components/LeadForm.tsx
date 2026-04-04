@@ -199,7 +199,7 @@ export default function LeadForm({ category, tasks }: LeadFormProps) {
 </select>
 
             <select name="urgency" className={inputClass} required>
-              <option value="">Hvornår starter vi arbejdsopgaverne?</option>
+              <option value="">Hvornår ønsker du opgaven udført?</option>
               <option value="Hurtigst muligt">Hurtigst muligt</option>
               <option value="1-2 måneder">1–2 måneder</option>
               <option value="3-4 måneder">3-4 måneder</option>                           
