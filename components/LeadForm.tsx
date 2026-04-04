@@ -188,21 +188,21 @@ export default function LeadForm({ category, tasks }: LeadFormProps) {
               <option>Andet</option>
             </select>
 
-            <select name="budget" className={inputClass} required>
-              <option value="">Budget</option>
-              <option value="0-25k">0 – 25.000 kr</option>
-              <option value="25-75k">25.000 – 75.000 kr</option>
-              <option value="75-150k">75.000 – 150.000 kr</option>
-              <option value="150k-250K">150.000 – 250.000 kr</option>
-              <option value="250k+">250.000+ kr</option>
-
-            </select>
+    <select name="budget" className={inputClass}>
+  <option value="">Budget (valgfrit)</option>
+  <option value="0-25k">0 – 25.000 kr</option>
+  <option value="25-75k">25.000 – 75.000 kr</option>
+  <option value="75-150k">75.000 – 150.000 kr</option>
+  <option value="150k-250K">150.000 – 250.000 kr</option>
+  <option value="250k+">250.000+ kr</option>
+  <option value="unknown">Ved ikke</option>
+</select>
 
             <select name="urgency" className={inputClass} required>
-              <option value="">Hvornår?</option>
+              <option value="">Hvornår starter vi arbejdsopgaverne?</option>
               <option value="Hurtigst muligt">Hurtigst muligt</option>
-              <option value="1-3 måneder">1–3 måneder</option>
-              <option value="4-12 måneder">4-12 måneder</option>                           
+              <option value="1-2 måneder">1–2 måneder</option>
+              <option value="3-4 måneder">3-4 måneder</option>                           
             </select>
           </div>
 
