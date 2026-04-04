@@ -147,11 +147,31 @@ export default function LeadForm({ category, tasks }: LeadFormProps) {
               />
             </div>
 
+
             <div className="flex flex-col gap-1">
               <label className={labelClass}>Email</label>
               <input name="email" className={inputClass} autoComplete="email" />
             </div>
           </div>
+
+
+<div className="flex flex-col gap-1">
+  <label className={labelClass}>
+    Hvornår må vi kontakte dig? <span className="text-red-500">*</span>
+  </label>
+
+  <select
+    name="contact_time"
+    required
+    className={inputClass}
+  >
+    <option value="">Vælg tidspunkt</option>
+<option value="09-12">Formiddag (09–12)</option>
+<option value="12-15">Middag (12–15)</option>
+<option value="15-18">Eftermiddag (15–18)</option>  </select>
+</div>
+
+
 
           {/* SECTION: DETALJER */}
           <div className="bg-white p-4 rounded-xl border border-slate-200 flex flex-col gap-4">
