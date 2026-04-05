@@ -33,12 +33,21 @@ export default function Menu() {
 
         {/* DESKTOP MENU */}
         <div className="hidden md:flex gap-8 text-sm">
-          {items.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </div>
+  {items.map((item) => (
+    <Link
+      key={item.href}
+      href={item.href}
+      className="relative group"
+    >
+      <span className="transition-colors duration-200 group-hover:text-blue-600">
+        {item.label}
+      </span>
+
+      {/* underline */}
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+    </Link>
+  ))}
+</div>
       </div>
 
       {/* MOBILE MENU */}
