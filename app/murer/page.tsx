@@ -1,3 +1,4 @@
+//app/murer/page.tsx
 import LeadForm from "@/components/LeadForm"
 
 export default function Page(){
@@ -15,7 +16,7 @@ Skal du ha ændret dit hus eller bygge nyt?
 </p>
 
 <LeadForm
-  category="murer"
+  category="Murer"
   tasks={[
     "Facaderenovering",
     "Tilbygning",

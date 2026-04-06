@@ -1,3 +1,5 @@
+//app/badevaerelse/page.tsx
+
 import LeadForm from "@/components/LeadForm"
 
 export default function Page(){
@@ -15,7 +17,7 @@ Indhent tilbud på badeværelse eller lignende opgaver.
 </p>
 
 <LeadForm
-  category="badevaerelse"
+  category="Badevaerelse"
   tasks={[
     "Totalrenovering",
     "Nyt badeværelse",

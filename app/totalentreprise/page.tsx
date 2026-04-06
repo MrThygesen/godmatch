@@ -1,3 +1,5 @@
+//app/totalentreprise/page.tsx
+
 import LeadForm from "@/components/LeadForm"
 
 export default function Page(){
@@ -15,7 +17,7 @@ Få hele projektet samlet hos én entreprenør – fra start til slut
 </p>
 
 <LeadForm
-  category="totalentreprise"
+  category="Totalentreprise"
   tasks={[
     "Renovering af bolig",
     "Tilbygning",

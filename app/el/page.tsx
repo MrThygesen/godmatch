@@ -1,3 +1,5 @@
+//app/el/page.tsx
+
 import LeadForm from "@/components/LeadForm"
 
 export default function Page(){
@@ -15,7 +17,7 @@ Installation, el-tjek eller nye løsninger
 </p>
 
 <LeadForm
-  category="el"
+  category="El"
   tasks={[
     "Nye installationer",
     "El-tjek",
