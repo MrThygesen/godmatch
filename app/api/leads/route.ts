@@ -10,9 +10,9 @@ import { sendEmail } from "@/lib/mail";
 function calculateStep1Score(body: any) {
   let score = 0;
 
-  if (body.service_level === "ready") score += 50;
-  if (body.service_level === "needs_advice") score += 30;
-  if (body.service_level === "researching") score += 10;
+  if (body.service_level === "Klar") score += 50;
+  if (body.service_level === "Rådgivning") score += 30;
+  if (body.service_level === "Undersøger") score += 10;
 
   if (body.description?.length > 100) score += 20;
   if (body.email) score += 10;
@@ -98,7 +98,7 @@ export async function POST(request: Request) {
           <h3>🔧 Opgave</h3>
           <p><strong>Kategori:</strong> ${body.category}</p>
           <p><strong>Type:</strong> ${body.task_type || "-"}</p>
-          <p><strong>Service:</strong> ${body.service_level}</p>
+          <p><strong>Opgave Status:</strong> ${body.service_level}</p>
 
           <h3>📝 Beskrivelse</h3>
           <p>${body.description}</p>

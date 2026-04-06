@@ -1,3 +1,4 @@
+// api/leads/send/route.ts
 import { sql } from "@/lib/postgres"
 import { sendEmail } from "@/lib/mail"
 
@@ -61,6 +62,12 @@ export async function POST(req: Request){
     <hr style="margin:20px 0;" />
 
     <h3>👤 Kunde</h3>
+
+    <h3 style="margin-top:20px;">🔧 Opgave</h3>
+    <p><strong>Kategori:</strong> ${lead.category}</p>
+    <p><strong>Type:</strong> ${lead.task_type || "-"}</p>
+
+
     <p><strong>Navn:</strong> ${lead.name}</p>
     <p><strong>Telefon:</strong> ${lead.phone}</p>
     <p><strong>Email:</strong> ${lead.email || "-"}</p>
@@ -74,9 +81,6 @@ export async function POST(req: Request){
     <h3 style="margin-top:20px;">🏠 Bolig</h3>
     <p><strong>Type:</strong> ${lead.property_type || "-"}</p>
 
-    <h3 style="margin-top:20px;">🔧 Opgave</h3>
-    <p><strong>Kategori:</strong> ${lead.category}</p>
-    <p><strong>Type:</strong> ${lead.task_type || "-"}</p>
 
     <h3 style="margin-top:20px;">💰 Kunde info</h3>
     <p><strong>Budget:</strong> ${lead.budget || "-"}</p>
@@ -168,7 +172,7 @@ export async function POST(req: Request){
 
     <p><strong>Budget:</strong> ${lead.budget || "-"}</p>
     <p><strong>Tid:</strong> ${lead.urgency || "-"}</p>
-    <p><strong>Serviceniveau:</strong> ${lead.service_level || "-"}</p>
+    <p><strong>Status:</strong> ${lead.service_level || "-"}</p>
 
     <p><strong>Beskrivelse:</strong></p>
     <div style="background:#f9fafb; padding:12px; border-radius:6px;">

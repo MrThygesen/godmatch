@@ -1,3 +1,4 @@
+//components/LeadForm.tsx
 "use client";
 
 import { useState } from "react";
@@ -133,9 +134,9 @@ export default function LeadForm({ category, tasks }: LeadFormProps) {
 
             <select name="service_level" required className={inputClass}>
               <option value="">Hvor langt er du?</option>
-              <option value="ready">Klar til arbejdsopgaven</option>
-              <option value="needs_advice">Har brug for rådgivning</option>
-              <option value="researching">Undersøger mulighederne</option>
+              <option value="Klar">Klar til arbejdsopgaven</option>
+              <option value="Rådgivning">Har brug for konkret rådgivning</option>
+              <option value="Undersøger">Undersøger mulighederne</option>
             </select>
           </div>
 
