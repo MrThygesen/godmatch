@@ -14,7 +14,7 @@ export async function sendEmail(to: string, name: string, data: any){
     },
     body: JSON.stringify({
       sender: {
-        email: "mortenthygesen7@gmail.com",
+        email: "hello@godmatch.dk",
         name: "GodMatch"
       },
       to: [
