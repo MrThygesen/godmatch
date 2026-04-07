@@ -66,7 +66,7 @@ export async function POST(request: Request) {
       `,
     });
 
-    // ✅ MAIL TIL ADMIN (hello@godmatch.dk → forward til Gmail)
+    // ✅ MAIL TIL ADMIN
     await sendEmail("hello@godmatch.dk", "GodMatch", {
       subject: "🔔 Nyt lead",
       html: `
@@ -94,6 +94,39 @@ export async function POST(request: Request) {
 
   } catch (err: any) {
     console.error("POST ERROR:", err);
+
+    return Response.json(
+      { error: err.message },
+      { status: 500 }
+    );
+  }
+}
+
+// =========================
+// 🔵 STEP 2 – UPDATE LEAD
+// =========================
+export async function PUT(request: Request) {
+  try {
+    const body = await request.json();
+
+    if (!body.id) {
+      return Response.json({ error: "Missing id" }, { status: 400 });
+    }
+
+    await sql`
+      UPDATE leads SET
+        zip_code = ${body.zip_code || null},
+        address = ${body.address || null},
+        property_type = ${body.property_type || null},
+        budget = ${body.budget || null},
+        urgency = ${body.urgency || null}
+      WHERE id = ${body.id}
+    `;
+
+    return Response.json({ success: true });
+
+  } catch (err: any) {
+    console.error("PUT ERROR:", err);
 
     return Response.json(
       { error: err.message },
