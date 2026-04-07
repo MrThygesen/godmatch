@@ -158,13 +158,12 @@ export default function LeadForm({ category, tasks }: LeadFormProps) {
   />
 
   {/* 🔥 EMAIL TILFØJET */}
- <input
-  name="email"
-  type="email"
-  required
-  placeholder="Email"
-  className={inputClass}
-/>
+  <input
+    name="email"
+    type="email"
+    placeholder="Email (valgfri)"
+    className={inputClass}
+  />
 
   <select name="contact_time" required className={inputClass}>
     <option value="">Hvornår må vi ringe?</option>
@@ -213,7 +212,7 @@ export default function LeadForm({ category, tasks }: LeadFormProps) {
             </select>
 
             <select name="urgency" required className={inputClass}>
-              <option value="">Hvornår?</option>
+              <option value="">Hvornår vil du starte?</option>
               <option>Hurtigst muligt</option>
               <option>1–2 måneder</option>
               <option>3–4 måneder</option>
