@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Hammer } from "lucide-react"
 import HeroSlider from "@/components/HeroSlider"
 
 export default function Page(){
@@ -57,7 +58,7 @@ export default function Page(){
 
                 <Link href="/toemrer" className="group">
                   <div className="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition">
-                    <div className="text-3xl">🪵</div>
+                    <Hammer className="w-8 h-8 text-gray-800" />
                     <div>
                       <h3 className="font-semibold group-hover:text-blue-600">
                         Tømrer
