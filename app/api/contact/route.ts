@@ -17,10 +17,10 @@ export async function POST(req: Request) {
 
     console.log("📩 CONTACT REQUEST:", { name, email })
 
-    // 🔥 NON-BLOCKING EMAIL
-    sendEmail(
-      "mr.morten.thygesen@gmail.com",
-      "Morten",
+    // ✅ FIX: await + send til domæne
+    await sendEmail(
+      "hello@godmatch.dk",
+      "GodMatch",
       {
         subject: "Ny kontaktbesked – GodMatch",
         html: `
@@ -29,15 +29,9 @@ export async function POST(req: Request) {
           <p><b>Email:</b> ${email}</p>
           <p><b>Besked:</b></p>
           <p>${message}</p>
-        `,
-        replyTo: {
-          email,
-          name
-        }
+        `
       }
-    ).catch((err) => {
-      console.error("📧 EMAIL ERROR:", err)
-    })
+    )
 
     return new Response(
       JSON.stringify({ success: true }),
