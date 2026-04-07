@@ -32,7 +32,7 @@ export default function Footer() {
             <span className="font-semibold mb-2 block text-gray-900">
               Kontakt
             </span>
-            <p className="text-gray-700">info@godmatch.dk</p>
+            <p className="text-gray-700">hello@godmatch.dk</p>
           </div>
         </div>
 
